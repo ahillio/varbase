@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+    - views.view.varbase_heroslider_media_browser
+  module:
+    - dropzonejs_eb_widget
+    - entity_browser_entity_form
+    - media_entity
+    - views
+name: heroslider_media_browser
+label: 'Heroslider Media Browser'
+display: modal
+display_configuration:
+  width: '750'
+  height: '550'
+  link_text: 'Select Media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration:
+  entity_type: media_bundle
+  display: rendered_entity
+  display_settings:
+    view_mode: default
+  select_text: 'Use selected'
+  selection_hidden: false
+  view: null
+  view_display: null
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  901e1292-75e8-4ecf-a08a-904e75b135bb:
+    settings:
+      view: varbase_heroslider_media_browser
+      view_display: heroslider_media_browser
+      submit_text: 'Select media'
+      auto_select: false
+    uuid: 901e1292-75e8-4ecf-a08a-904e75b135bb
+    weight: -10
+    label: Library
+    id: view
+  42c2cb74-26e8-49b4-8a83-e343f1b5733f:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: default
+      submit_text: 'Embed video'
+    uuid: 42c2cb74-26e8-49b4-8a83-e343f1b5733f
+    weight: -8
+    label: 'Embed a video'
+    id: entity_form
+  1f088e55-f55c-42c2-b8c2-a64a405812a1:
+    settings:
+      form_mode: default
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop image files here to upload them'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      submit_text: 'Select image'
+    uuid: 1f088e55-f55c-42c2-b8c2-a64a405812a1
+    weight: -9
+    label: 'Upload an image'
+    id: dropzonejs_media_entity_inline_entity_form

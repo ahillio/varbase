@@ -1,0 +1,15 @@
+name: Varbase Dashboard
+type: module
+description: Varbase Administration Dashboard
+package: Administration
+# core: 8.x
+dependencies:
+  - total_control
+  - google_analytics_reports
+  - charts
+
+# Information added by Drupal.org packaging script on 2017-10-03
+version: '8.x-1.0-beta9'
+core: '8.x'
+project: 'varbase_total_control'
+datestamp: 1507017248

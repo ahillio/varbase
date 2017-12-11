@@ -1,0 +1,4 @@
+name: Entity Clone
+description: Add a clone action for all entities
+core:  "8.x"
+type: module

@@ -1,0 +1,45 @@
+# Varbase hero slider media general styling.
+general-styling:
+  css:
+    component:
+      css/varbase_hero_slider_media.style.css:
+        minified: true
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - slick/slick
+
+# Varbase hero slider media general scripts.
+general-scripts:
+  js:
+    js/varbase_hero_slider_media.scripts.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - slick/slick
+
+# Vimeo player library.
+vimeo-player:
+  js:
+    js/vimeo/player.min.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - slick/slick
+
+# Youtube player library.
+youtube-player:
+  js:
+    js/youtube/player.min.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - slick/slick

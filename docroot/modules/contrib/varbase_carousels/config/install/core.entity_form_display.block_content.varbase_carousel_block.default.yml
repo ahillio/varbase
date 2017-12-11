@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_carousel_block
+    - field.field.block_content.varbase_carousel_block.field_media_carousel_slide
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+id: block_content.varbase_carousel_block.default
+targetEntityType: block_content
+bundle: varbase_carousel_block
+mode: default
+content:
+  field_media_carousel_slide:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Image
+      label_plural: Images
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: carousels_media_browser
+    type: inline_entity_form_complex
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

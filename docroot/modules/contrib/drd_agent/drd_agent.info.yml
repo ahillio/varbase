@@ -1,0 +1,13 @@
+name: DRD Agent
+type: module
+description: Agent on remote Drupal sites for the main DRD module.
+package: Administration
+# core: 8.x
+# project: drd_agent
+configure: drd_agent.settings.form
+
+# Information added by Drupal.org packaging script on 2017-11-07
+version: '8.x-3.5'
+core: '8.x'
+project: 'drd_agent'
+datestamp: 1510076597

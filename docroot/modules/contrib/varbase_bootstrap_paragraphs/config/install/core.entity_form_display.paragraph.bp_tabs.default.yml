@@ -1,0 +1,115 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.paragraph.bp_tabs.bp_background
+    - field.field.paragraph.bp_tabs.bp_image_field
+    - field.field.paragraph.bp_tabs.bp_tab_section
+    - field.field.paragraph.bp_tabs.bp_width
+    - paragraphs.paragraphs_type.bp_tabs
+  module:
+    - entity_browser
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_advanced:
+      children:
+        - group_styling_settings
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        label: 'Styling settings'
+        required_fields: true
+        id: styling-settings
+        classes: ''
+        open: false
+      label: 'Styling settings'
+    group_background_settings:
+      children:
+        - bp_background
+        - bp_image_field
+      parent_name: group_styling_settings
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Background settings'
+    group_content_settings:
+      children:
+        - bp_width
+      parent_name: group_styling_settings
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Content settings'
+    group_styling_settings:
+      children:
+        - group_background_settings
+        - group_content_settings
+      parent_name: group_advanced
+      weight: 20
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Styling settings'
+id: paragraph.bp_tabs.default
+targetEntityType: paragraph
+bundle: bp_tabs
+mode: default
+content:
+  bp_background:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  bp_image_field:
+    weight: 23
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: field_preview
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  bp_tab_section:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  bp_width:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

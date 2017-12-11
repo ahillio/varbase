@@ -1,0 +1,27 @@
+name: 'Varbase Editor'
+description: 'Editor profile and settings to be used in most websites.'
+type: module
+dependencies:
+  - ace_editor
+  - anchor_link
+  - ckeditor
+  - ckeditor_bidi
+  - ckeditor_media_embed
+  - editor
+  - entity_embed
+  - filter
+  - image_resize_filter
+  - linkit
+  - node
+  - pathologic
+  - video_embed_wysiwyg
+package: Varbase
+# version: 8.x-4.x-dev
+# core: 8.x
+# project: varbase_editor
+
+# Information added by Drupal.org packaging script on 2017-08-20
+version: '8.x-4.18'
+core: '8.x'
+project: 'varbase_editor'
+datestamp: 1503251646
